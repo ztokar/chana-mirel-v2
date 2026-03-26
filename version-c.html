@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chana Mirel Photography | Version C - Gallery Grid</title>
+  <meta name="description" content="Premier Baltimore newborn, baby, and family photographer.">
+  <link rel="stylesheet" href="styles/v2.css">
+  <style>
+    /* Version C: Gallery Grid / Photography-Forward */
+    .hero-c {
+      padding-top: 88px;
+      padding-bottom: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 8px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .hero-grid .large {
+      grid-row: 1 / 3;
+      overflow: hidden;
+    }
+
+    .hero-grid .small {
+      overflow: hidden;
+    }
+
+    .hero-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-grid .large:hover img,
+    .hero-grid .small:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-grid .large img {
+      aspect-ratio: 3/4;
+    }
+
+    .hero-grid .small img {
+      aspect-ratio: 4/3;
+    }
+
+    .hero-intro {
+      max-width: 720px;
+      margin: 56px auto;
+      text-align: center;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .hero-intro .tagline {
+      margin-bottom: 16px;
+    }
+
+    .hero-intro p {
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+
+    /* Gallery grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .gallery-grid .img-wrap {
+      overflow: hidden;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-grid .img-wrap:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Session links row */
+    .session-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .session-link {
+      text-align: center;
+      padding: 48px 24px;
+      border-right: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: block;
+      color: #1a1a1a;
+    }
+
+    .session-link:last-child {
+      border-right: none;
+    }
+
+    .session-link:hover {
+      background: #FAF8F5;
+      color: #1a1a1a;
+    }
+
+    .session-link h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .session-link p {
+      font-size: 0.88rem;
+      color: #888;
+      margin-bottom: 20px;
+      max-width: none;
+    }
+
+    /* Image band */
+    .image-band {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .image-band-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 8px;
+    }
+
+    .image-band-grid .img-wrap {
+      overflow: hidden;
+    }
+
+    .image-band-grid img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-band-grid .img-wrap:hover img {
+      transform: scale(1.03);
+    }
+
+    /* About strip - uses shared .about-grid from v2.css */
+
+    /* Stats bar - uses shared from v2.css */
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .hero-grid .large { grid-row: auto; }
+      .hero-grid .large img { aspect-ratio: 3/2; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .session-links {
+        grid-template-columns: 1fr;
+      }
+      .session-link {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+      }
+      .image-band-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        Chana Mirel
+        <small>Photography</small>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Newborn</a></li>
+        <li><a href="#">Sitter</a></li>
+        <li><a href="#">Milestones</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Investment</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="padding:10px 28px;font-size:0.62rem;">Inquire</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero: Asymmetric Grid -->
+  <section class="hero-c">
+    <div class="hero-grid">
+      <div class="large reveal">
+        <img src="images/hero1.jpg" alt="Newborn portrait">
+      </div>
+      <div class="small reveal reveal-delay-1">
+        <img src="images/hero2.jpg" alt="Newborn baby">
+      </div>
+      <div class="small reveal reveal-delay-2">
+        <img src="images/hero3.jpg" alt="Baby sitter portrait">
+      </div>
+    </div>
+
+    <div class="hero-intro">
+      <p class="label tagline reveal">Baltimore Newborn & Family Photographer</p>
+      <h1 class="reveal reveal-delay-1">Chana Mirel Photography</h1>
+      <div class="divider-center reveal reveal-delay-2"></div>
+      <p class="reveal reveal-delay-2">Breathtaking, timeless, artistic portraits for families across Maryland, D.C., and Virginia. Every session is a fully curated experience, from consultation to finished artwork on your wall.</p>
+      <div class="reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary">Book your session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="section">
+    <div class="container text-center" style="margin-bottom:44px;">
+      <p class="label reveal">Portfolio</p>
+      <h2 class="reveal reveal-delay-1">A glimpse of our work</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="img-wrap reveal"><img src="images/newborn1.jpg" alt="Newborn"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/hero2.jpg" alt="Sitter"></div>
+      <div class="img-wrap reveal reveal-delay-2"><img src="images/milestone1.jpg" alt="Milestone"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/hero3.jpg" alt="Baby"></div>
+      <div class="img-wrap reveal reveal-delay-2"><img src="images/family1.jpg" alt="Family"></div>
+      <div class="img-wrap reveal reveal-delay-3"><img src="images/hero1.jpg" alt="Newborn session"></div>
+    </div>
+  </section>
+
+  <!-- Session Links -->
+  <section class="section-warm">
+    <div class="container text-center" style="margin-bottom:36px;">
+      <p class="label reveal">Sessions</p>
+      <h2 class="reveal reveal-delay-1">What we photograph</h2>
+    </div>
+    <div class="session-links">
+      <a href="#" class="session-link reveal">
+        <h3>Newborn</h3>
+        <p>First days, tiny details, peaceful poses</p>
+        <span class="btn btn-outline" style="font-size:0.62rem;padding:10px 24px;">Explore</span>
+      </a>
+      <a href="#" class="session-link reveal reveal-delay-1">
+        <h3>Sitter</h3>
+        <p>Belly laughs, peek-a-boo, first grins</p>
+        <span class="btn btn-outline" style="font-size:0.62rem;padding:10px 24px;">Explore</span>
+      </a>
+      <a href="#" class="session-link reveal reveal-delay-2">
+        <h3>Milestones</h3>
+        <p>First birthdays, cake smash, celebrations</p>
+        <span class="btn btn-outline" style="font-size:0.62rem;padding:10px 24px;">Explore</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Image Band -->
+  <section style="padding:8px 0 0;">
+    <div class="image-band">
+      <div class="image-band-grid">
+        <div class="img-wrap reveal"><img src="images/studio1.jpg" alt="Studio setup"></div>
+        <div class="img-wrap reveal reveal-delay-1"><img src="images/newborn1.jpg" alt="Newborn with props"></div>
+        <div class="img-wrap reveal reveal-delay-2"><img src="images/milestone1.jpg" alt="Milestone celebration"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Strip -->
+  <section class="section">
+    <div class="about-grid reveal" style="max-width:1100px;margin:0 auto;padding:0 clamp(24px,4vw,60px);">
+      <div class="about-image">
+        <img src="images/hero1.jpg" alt="Chana Mirel at work" style="object-position: center 25%;">
+      </div>
+      <div class="about-text">
+        <p class="label">About Chana Mirel</p>
+        <h2>Creating fairy-tale masterpieces</h2>
+        <div class="divider"></div>
+        <p>As a premier Baltimore newborn and family photographer, I pour my heart into every session. Using whimsical backdrops, handcrafted props, and artistic vision, I create museum-worthy portraits that capture the genuine beauty and connection of your family.</p>
+        <p>From acrylic wall art to matted prints and heirloom albums, I work with you to design pieces that complement your home and tell your family's story.</p>
+        <a href="#" class="btn btn-outline">Get to know me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat reveal">
+      <h3>100+</h3>
+      <p>5-Star Google Reviews</p>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <h3>8+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <h3>500+</h3>
+      <p>Families Photographed</p>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <section class="section testimonial-section">
+    <div class="testimonial reveal">
+      <blockquote>"Chana Mirel is amazing! She has taken newborn photos for my two daughters. She is always so patient, takes her time, and wants to ensure we get the best shots. She offers great suggestions to make sure we capture every precious moment. I highly recommend her to anyone!"</blockquote>
+      <cite>- Rebecca M., Baltimore</cite>
+      <div style="margin-top:28px;">
+        <a href="#contact" class="btn btn-primary">Book your session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <p class="label reveal">Get in touch</p>
+        <h2 class="reveal reveal-delay-1">Let's start your journey</h2>
+        <div class="divider-center reveal reveal-delay-2"></div>
+        <p class="reveal reveal-delay-2">Every session begins with a conversation.</p>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" placeholder="First name" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" placeholder="Last name" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="(410) 555-1234" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group form-full">
+          <label for="session-type">Session type</label>
+          <select id="session-type">
+            <option value="" disabled selected>Choose a session type</option>
+            <option>Newborn</option>
+            <option>Sitter</option>
+            <option>Milestone / Cake Smash</option>
+            <option>Family</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label for="message">Tell me about your vision</label>
+          <textarea id="message" placeholder="Share your ideas, due date, or any details..."></textarea>
+        </div>
+        <div class="text-center" style="margin-top:28px;">
+          <button class="btn btn-primary" type="button">Send inquiry</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h4>Chana Mirel Photography</h4>
+        <p>Baltimore, Maryland</p>
+        <p>Serving Maryland, D.C. & Virginia</p>
+        <div class="social-links">
+          <a href="#" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Follow on Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Sessions</h4>
+        <p><a href="#">Newborn</a></p>
+        <p><a href="#">Sitter</a></p>
+        <p><a href="#">Milestones</a></p>
+        <p><a href="#">Investment</a></p>
+      </div>
+      <div>
+        <h4>More</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Blog</a></p>
+        <p><a href="#">Client reviews</a></p>
+        <p><a href="#">FAQ</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chana Mirel Photography. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+    document.getElementById('navToggle').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
