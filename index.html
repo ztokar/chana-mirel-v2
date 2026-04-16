@@ -41,13 +41,12 @@
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #8B6F5E;
-      border: 1px solid rgba(139, 111, 94, 0.2);
+      color: #58A6D8;
+      border: 1px solid rgba(88, 166, 216, 0.3);
       padding: 4px 12px;
       margin-bottom: 28px;
     }
 
-    /* V3 Section */
     .section-label {
       font-family: 'Outfit', sans-serif;
       font-size: 0.68rem;
@@ -60,7 +59,7 @@
 
     .version-cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
       margin-bottom: 48px;
     }
@@ -76,8 +75,8 @@
     }
 
     .version-card:hover {
-      border-color: #C4A882;
-      box-shadow: 0 12px 40px rgba(139, 111, 94, 0.1);
+      border-color: #58A6D8;
+      box-shadow: 0 12px 40px rgba(88, 166, 216, 0.12);
       color: #1a1a1a;
       transform: translateY(-6px);
     }
@@ -88,6 +87,7 @@
       margin-bottom: 16px;
       letter-spacing: -0.02em;
       line-height: 1;
+      color: #58A6D8;
     }
 
     .version-card h3 {
@@ -97,6 +97,7 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       margin-bottom: 16px;
+      color: #58A6D8;
     }
 
     .version-card p {
@@ -106,18 +107,32 @@
       max-width: none;
     }
 
-    /* Color-coded cards */
-    .card-blue .letter { color: #58A6D8; }
-    .card-blue h3 { color: #58A6D8; }
-    .card-blue:hover { border-color: #58A6D8; box-shadow: 0 12px 40px rgba(88, 166, 216, 0.12); }
+    .feature-list {
+      list-style: none;
+      text-align: left;
+      margin-top: 20px;
+      padding: 0;
+    }
 
-    .card-blush .letter { color: #c89aa3; }
-    .card-blush h3 { color: #c89aa3; }
-    .card-blush:hover { border-color: #F4B6C0; box-shadow: 0 12px 40px rgba(244, 182, 192, 0.12); }
+    .feature-list li {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      color: #666;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-    .card-neutral .letter { color: #C4A882; }
-    .card-neutral h3 { color: #8B6F5E; }
-    .card-neutral:hover { border-color: #C4A882; box-shadow: 0 12px 40px rgba(196, 168, 130, 0.12); }
+    .feature-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #58A6D8;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     .swatch {
       display: flex;
@@ -142,7 +157,6 @@
       line-height: 1.8;
     }
 
-    /* Previous versions */
     .previous {
       margin-top: 60px;
       padding-top: 40px;
@@ -151,26 +165,27 @@
 
     .prev-links {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       justify-content: center;
       margin-top: 16px;
+      flex-wrap: wrap;
     }
 
     .prev-links a {
       font-family: 'Outfit', sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #999;
-      padding: 8px 20px;
+      padding: 6px 16px;
       border: 1px solid rgba(0,0,0,0.08);
       transition: all 0.3s ease;
     }
 
     .prev-links a:hover {
-      color: #8B6F5E;
-      border-color: #C4A882;
+      color: #58A6D8;
+      border-color: #58A6D8;
     }
 
     @media (max-width: 768px) {
@@ -187,56 +202,62 @@
 
   <div class="picker">
     <div class="picker-inner">
-      <div class="badge">Round 2 - Based on your feedback</div>
+      <div class="badge">Round 3 - With Your Real Photos & Logos</div>
       <p class="label" style="margin-bottom: 16px;">Website Redesign</p>
       <h1>Chana Mirel Photography</h1>
       <div class="divider-center"></div>
-      <p>Based on your feedback, here are three new versions. All use the A+C hybrid layout you liked, with three different color directions. Click any to see the full homepage.</p>
+      <p>Based on your feedback, here are two new versions using your real portfolio images and logos. Both use your blue + pink palette with a black footer. They differ in layout approach. Click either to see the full homepage.</p>
 
       <div class="version-cards">
-        <a href="version-d.html" class="version-card card-blue">
-          <div class="letter">D</div>
+        <a href="version-g.html" class="version-card">
+          <div class="letter">G</div>
           <div class="swatch">
             <span style="background:#58A6D8;"></span>
             <span style="background:#F4B6C0;"></span>
             <span style="background:#FFFFFF;"></span>
-            <span style="background:#1a2a3a;"></span>
+            <span style="background:#111111;"></span>
           </div>
-          <h3>Blue Heirloom</h3>
-          <p>Your original blue and pink colors from your current site, with the clean editorial layout inspired by Kutner. Classic, calming, professional.</p>
+          <h3>Clean Gallery</h3>
+          <p>Full-width heart image hero, 4-card services grid, masonry gallery, and numbered "What to Expect" cards.</p>
+          <ul class="feature-list">
+            <li>Heart baby image as the hero</li>
+            <li>4-card services grid with your real photos</li>
+            <li>Masonry-style portfolio gallery</li>
+            <li>Numbered experience cards</li>
+            <li>Your real logo in nav + footer</li>
+          </ul>
         </a>
-        <a href="version-e.html" class="version-card card-blush">
-          <div class="letter">E</div>
+        <a href="version-h.html" class="version-card">
+          <div class="letter">H</div>
           <div class="swatch">
-            <span style="background:#c89aa3;"></span>
+            <span style="background:#58A6D8;"></span>
             <span style="background:#F4B6C0;"></span>
-            <span style="background:#FFF8F9;"></span>
-            <span style="background:#2e2226;"></span>
+            <span style="background:#FFFFFF;"></span>
+            <span style="background:#111111;"></span>
           </div>
-          <h3>Blush Editorial</h3>
-          <p>Soft dusty rose palette with a reversed layout and unique session picker. Feminine, warm, and clearly different from Kutner's dark brown aesthetic.</p>
-        </a>
-        <a href="version-f.html" class="version-card card-neutral">
-          <div class="letter">F</div>
-          <div class="swatch">
-            <span style="background:#8B6F5E;"></span>
-            <span style="background:#C4A882;"></span>
-            <span style="background:#FAF8F5;"></span>
-            <span style="background:#1e1e1e;"></span>
-          </div>
-          <h3>Warm Neutral</h3>
-          <p>The elevated taupe and gold from our earlier mockups, restructured with your preferred layout. Sophisticated, timeless, gallery-like.</p>
+          <h3>Editorial Storytelling</h3>
+          <p>Asymmetric 3-image hero, full-width editorial service blocks, side-by-side testimonial, and a dramatic heart banner.</p>
+          <ul class="feature-list">
+            <li>Asymmetric 3-image hero grid</li>
+            <li>Large editorial service blocks (alternating)</li>
+            <li>Heart image as full-width banner with CTA</li>
+            <li>Side-by-side testimonial with portrait</li>
+            <li>Icon-based experience section</li>
+          </ul>
         </a>
       </div>
 
-      <p class="note">All three versions share the same A+C hybrid structure you liked: asymmetric image grid hero, session picker, portfolio gallery, about section, stats bar, and contact form. Each version has unique section arrangements so pages won't feel copy-paste. Stock placeholder photos will be replaced with your real images.</p>
+      <p class="note">Both versions use your real portfolio images, your Signature logo, and your blue + pink color palette. Footer and stats bar are now black (not navy). "Where do you imagine your session?" text has been removed. Each version has a unique layout so you can see how pages can feel different from each other.</p>
 
       <div class="previous">
-        <p class="note">Previous round (A, B, C):</p>
+        <p class="note">Previous rounds:</p>
         <div class="prev-links">
-          <a href="version-a.html">Version A</a>
-          <a href="version-b.html">Version B</a>
-          <a href="version-c.html">Version C</a>
+          <a href="version-d.html">D - Blue Heirloom</a>
+          <a href="version-e.html">E - Blush Editorial</a>
+          <a href="version-f.html">F - Warm Neutral</a>
+          <a href="version-a.html">A - Classic</a>
+          <a href="version-b.html">B - Zigzag</a>
+          <a href="version-c.html">C - Gallery</a>
         </div>
       </div>
     </div>

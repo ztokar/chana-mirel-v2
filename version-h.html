@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chana Mirel Photography | Version H - Editorial Storytelling</title>
+  <meta name="description" content="Premier Baltimore newborn, baby, and family photographer. Award-winning studio specializing in newborn, maternity, cake smash, and headshot photography.">
+  <link rel="stylesheet" href="styles/v3-base.css">
+  <style>
+    /* ============================================
+       VERSION H: EDITORIAL STORYTELLING
+       Blue + Pink palette, BLACK footer/stats
+       Asymmetric hero, editorial service blocks,
+       different section order than G
+       ============================================ */
+    :root {
+      --accent: #58A6D8;
+      --accent-hover: #4890bf;
+      --accent-light: #F4B6C0;
+      --accent-glow: rgba(88, 166, 216, 0.2);
+      --accent-subtle: rgba(88, 166, 216, 0.06);
+      --bg: #FFFFFF;
+      --bg-warm: #F8FBFD;
+      --footer-bg: #111111;
+      --footer-text: #999;
+      --stats-bg: #111111;
+      --stats-number: #58A6D8;
+    }
+
+    .btn-text { border-bottom-color: rgba(88, 166, 216, 0.3); }
+    .social-links a:hover { border-color: rgba(244, 182, 192, 0.35); background: rgba(244, 182, 192, 0.06); }
+    .social-links a:hover svg { fill: var(--accent-light); }
+
+    /* --- Nav logo as image --- */
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    /* --- Editorial Service Blocks --- */
+    .editorial-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .editorial-block.reversed { direction: rtl; }
+    .editorial-block.reversed > * { direction: ltr; }
+
+    .editorial-img {
+      overflow: hidden;
+    }
+
+    .editorial-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.7s ease;
+      min-height: 400px;
+    }
+
+    .editorial-img:hover img {
+      transform: scale(1.03);
+    }
+
+    .editorial-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(40px, 6vw, 80px);
+    }
+
+    .editorial-content .label {
+      margin-bottom: 14px;
+    }
+
+    .editorial-content h2 {
+      margin-bottom: 16px;
+    }
+
+    .editorial-content p {
+      margin-bottom: 20px;
+      max-width: 44ch;
+    }
+
+    /* --- Heart Banner --- */
+    .heart-banner {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heart-banner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    .heart-banner-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 100%);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .heart-banner-overlay h2 {
+      color: #FFFFFF;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 20px;
+    }
+
+    .heart-banner-overlay .btn-primary {
+      background: rgba(255,255,255,0.95);
+      color: #1a1a1a;
+    }
+
+    .heart-banner-overlay .btn-primary:hover {
+      background: #FFFFFF;
+      color: var(--accent);
+    }
+
+    /* --- Testimonial (different style from G) --- */
+    .testimonial-editorial {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-img {
+      overflow: hidden;
+    }
+
+    .testimonial-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      min-height: 360px;
+    }
+
+    .testimonial-quote {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(32px, 5vw, 64px);
+      background: var(--bg-warm);
+    }
+
+    .testimonial-quote blockquote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.9;
+      color: #3a3a3a;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-quote cite {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* --- Compact Gallery (2 column) --- */
+    .gallery-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .gallery-duo .img-wrap {
+      overflow: hidden;
+    }
+
+    .gallery-duo img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-duo .img-wrap:hover img {
+      transform: scale(1.03);
+    }
+
+    /* --- Footer logo --- */
+    .footer-logo-img {
+      height: 36px;
+      width: auto;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    /* --- What to Expect (horizontal) --- */
+    .expect-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      max-width: 1000px;
+      margin: 44px auto 0;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .expect-item {
+      text-align: center;
+    }
+
+    .expect-item-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(88, 166, 216, 0.25);
+    }
+
+    .expect-item-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .expect-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .expect-item p {
+      font-size: 0.95rem;
+      max-width: none;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .editorial-block,
+      .editorial-block.reversed {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .testimonial-editorial { grid-template-columns: 1fr; }
+      .gallery-duo { grid-template-columns: 1fr; }
+      .expect-row { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logos/Signature_Logo_Black.png" alt="Chana Mirel Photography" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Newborn</a></li>
+        <li><a href="#">Maternity</a></li>
+        <li><a href="#">Cake Smash</a></li>
+        <li><a href="#">Headshots</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="padding:10px 28px;font-size:0.62rem;">Inquire</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero: Asymmetric Grid with Real Photos -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="large reveal">
+        <img src="images/real/NB_Willis-5460.jpg" alt="Newborn portrait session">
+      </div>
+      <div class="small reveal reveal-delay-1">
+        <img src="images/real/MILKBATH_Emma.jpg" alt="Milk bath baby session">
+      </div>
+      <div class="small reveal reveal-delay-2">
+        <img src="images/real/stella-1098.jpg" alt="Baby sitter portrait">
+      </div>
+    </div>
+
+    <div class="hero-intro">
+      <p class="label tagline reveal">Baltimore Newborn, Baby & Family Photographer</p>
+      <h1 class="reveal reveal-delay-1">Chana Mirel Photography</h1>
+      <div class="divider-center reveal reveal-delay-2"></div>
+      <p class="reveal reveal-delay-2">Timeless, artistic portraits that capture life's most precious moments. Every session is a fully guided experience from start to finish.</p>
+      <div class="reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary">Book your session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar (right after hero for impact) -->
+  <div class="stats-bar">
+    <div class="stat reveal">
+      <h3>100+</h3>
+      <p>Five-Star Google Reviews</p>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <h3>8+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <h3>500+</h3>
+      <p>Families Photographed</p>
+    </div>
+  </div>
+
+  <!-- Editorial Service Block 1: Newborn -->
+  <section class="editorial-block reveal">
+    <div class="editorial-img">
+      <img src="images/real/NB_BLUE_HEART_Smith.jpg" alt="Newborn baby in blue heart wrap">
+    </div>
+    <div class="editorial-content">
+      <p class="label">Our Most Requested</p>
+      <h2>Newborn Sessions</h2>
+      <div class="divider"></div>
+      <p>Those tiny fingers, the curled toes, the peaceful expressions. Newborn sessions are best within the first 5-14 days. I handle every detail so you can simply enjoy the experience.</p>
+      <p>The heart wrap has become my signature. Parents tell me they booked because they fell in love with this image.</p>
+      <a href="#" class="btn btn-outline">Learn more</a>
+    </div>
+  </section>
+
+  <!-- Editorial Service Block 2: Cake Smash (reversed) -->
+  <section class="editorial-block reversed reveal">
+    <div class="editorial-img">
+      <img src="images/real/CAKESMASH_Eum.jpg" alt="First birthday cake smash photography" style="object-position: center center;">
+    </div>
+    <div class="editorial-content">
+      <p class="label">Celebrate the Milestone</p>
+      <h2>Cake Smash Sessions</h2>
+      <div class="divider"></div>
+      <p>From the confusion to the cake-covered giggles, first birthday sessions are full of personality. Each setup is custom-designed to match your theme and color palette.</p>
+      <a href="#" class="btn btn-outline">Learn more</a>
+    </div>
+  </section>
+
+  <!-- Editorial Service Block 3: Headshots -->
+  <section class="editorial-block reveal">
+    <div class="editorial-img">
+      <img src="images/real/HEADSHOT_Mason.jpg" alt="Professional headshot photography">
+    </div>
+    <div class="editorial-content">
+      <p class="label">Professional & Personal</p>
+      <h2>Headshots & Branding</h2>
+      <div class="divider"></div>
+      <p>Whether you need a LinkedIn headshot, team photos, or a full personal branding shoot, my studio lighting and clean backdrops deliver polished, confident images.</p>
+      <a href="#" class="btn btn-outline">Learn more</a>
+    </div>
+  </section>
+
+  <!-- Heart Banner (full-width break with CTA) -->
+  <div class="heart-banner">
+    <img src="images/real/NB_BLUE_HEART_Smith.jpg" alt="Baby in heart wrap - signature Chana Mirel Photography">
+    <div class="heart-banner-overlay">
+      <h2>Your baby will never be this small again</h2>
+      <a href="#contact" class="btn btn-primary">Book your session</a>
+    </div>
+  </div>
+
+  <!-- Testimonial (editorial style - different from G) -->
+  <section class="section">
+    <div class="testimonial-editorial reveal">
+      <div class="testimonial-img">
+        <img src="images/real/PORTRAITS_Naam.jpg" alt="Family portrait session">
+      </div>
+      <div class="testimonial-quote">
+        <blockquote>"Chana Mirel is amazing! She has taken newborn photos for my two daughters. She is always so patient, takes her time, and wants to ensure we get the best shots. She offers great suggestions to make sure we capture every precious moment. I highly recommend her to anyone!"</blockquote>
+        <cite>- Rebecca M., Baltimore</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect (icon-based, different from G's numbered cards) -->
+  <section class="section-warm">
+    <div class="container text-center">
+      <p class="label reveal">The Experience</p>
+      <h2 class="reveal reveal-delay-1">What to Expect</h2>
+      <div class="divider-center reveal reveal-delay-2"></div>
+    </div>
+    <div class="expect-row reveal">
+      <div class="expect-item">
+        <div class="expect-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Consultation</h3>
+        <p>We start with a conversation about your vision, timing, and style preferences. I guide you through every detail.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <h3>Your Session</h3>
+        <p>Arrive at my Baltimore studio, relax, and let me work my magic. Sessions include wardrobe, props, and expert posing.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Reveal & Artwork</h3>
+        <p>Two weeks later, we meet for a private viewing. Choose your favorites for museum-quality prints, albums, and wall art.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery (duo layout - different from G's 3-column) -->
+  <section class="section">
+    <div class="container text-center" style="margin-bottom:44px;">
+      <p class="label reveal">Portfolio</p>
+      <h2 class="reveal reveal-delay-1">A glimpse of our work</h2>
+    </div>
+    <div class="gallery-duo">
+      <div class="img-wrap reveal"><img src="images/real/HEADSHOT_Prero.jpg" alt="Professional headshot"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/real/PORTRAITS_TEMP_Zeltser.jpg" alt="Family portrait"></div>
+      <div class="img-wrap reveal"><img src="images/real/MILKBATH_Emma.jpg" alt="Milk bath baby session"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/real/HEADSHOT_PORTRAIT_Poep.jpg" alt="Portrait session"></div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="container">
+      <p class="label reveal">Ready to get started?</p>
+      <h2 class="reveal reveal-delay-1">Let's create something beautiful</h2>
+      <p class="reveal reveal-delay-2">From the first consultation to the finished artwork on your wall, I'm with you every step of the way.</p>
+      <div class="reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary">Send an inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <p class="label reveal">Get in touch</p>
+        <h2 class="reveal reveal-delay-1">Let's start your journey</h2>
+        <div class="divider-center reveal reveal-delay-2"></div>
+        <p class="reveal reveal-delay-2">Every session begins with a conversation. Fill out the form below and I'll be in touch within 24 hours.</p>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" placeholder="First name" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" placeholder="Last name" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="(410) 555-1234" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group form-full">
+          <label for="session-type">Session type</label>
+          <select id="session-type">
+            <option value="" disabled selected>Choose a session type</option>
+            <option>Newborn</option>
+            <option>Sitter / Baby</option>
+            <option>Milestone / Cake Smash</option>
+            <option>Family</option>
+            <option>Maternity</option>
+            <option>Headshots / Personal Branding</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label for="message">Tell me about your vision</label>
+          <textarea id="message" placeholder="Share your ideas, due date, or any details..."></textarea>
+        </div>
+        <div class="text-center" style="margin-top:28px;">
+          <button class="btn btn-primary" type="button">Send inquiry</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <img src="images/logos/Signature_White.png" alt="Chana Mirel Photography" class="footer-logo-img">
+        <p>Baltimore, Maryland</p>
+        <p>2376 Sweet Meadow Road, 21209</p>
+        <div class="social-links">
+          <a href="#" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Follow on Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Sessions</h4>
+        <p><a href="#">Newborn</a></p>
+        <p><a href="#">Maternity</a></p>
+        <p><a href="#">Cake Smash</a></p>
+        <p><a href="#">Headshots</a></p>
+        <p><a href="#">Family</a></p>
+      </div>
+      <div>
+        <h4>More</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Blog</a></p>
+        <p><a href="#">Client reviews</a></p>
+        <p><a href="#">FAQ</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chana Mirel Photography. All rights reserved.</p>
+      <p>Baltimore Newborn & Family Photographer</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); });
+
+    // Mobile toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => { toggle.classList.toggle('active'); links.classList.toggle('active'); });
+  </script>
+
+</body>
+</html>
