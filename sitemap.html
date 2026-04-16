@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chana Mirel Photography - Site Map Proposal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Outfit:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #58A6D8;
+      --pink: #F4B6C0;
+      --dark: #1a1a1a;
+      --body: #4a4a4a;
+      --muted: #888;
+      --bg: #FFFFFF;
+      --bg-warm: #F8FBFD;
+      --border: rgba(0,0,0,0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17px;
+      color: var(--body);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    .header {
+      text-align: center;
+      padding: 60px 24px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header .badge {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      border: 1px solid rgba(88,166,216,0.3);
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      margin-bottom: 12px;
+    }
+
+    /* Sitemap tree */
+    .sitemap {
+      max-width: 1000px;
+      margin: 40px auto 60px;
+      padding: 0 24px;
+    }
+
+    .tier {
+      margin-bottom: 48px;
+    }
+
+    .tier-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--blue);
+    }
+
+    .tier-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--blue);
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    .tier-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--dark);
+    }
+
+    .tier-desc {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .page-card {
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .page-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(88,166,216,0.1);
+    }
+
+    .page-card .page-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .page-card .page-url {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      color: var(--blue);
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
+
+    .page-card .page-desc {
+      font-size: 0.88rem;
+      color: var(--body);
+      line-height: 1.6;
+    }
+
+    .page-card .page-why {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      margin-bottom: 8px;
+    }
+
+    .tag-service { background: rgba(88,166,216,0.12); color: var(--blue); }
+    .tag-location { background: rgba(244,182,192,0.25); color: #b8808a; }
+    .tag-blog { background: rgba(139,111,94,0.12); color: #8B6F5E; }
+    .tag-legal { background: rgba(0,0,0,0.06); color: #666; }
+
+    /* Summary */
+    .summary {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      padding: 32px;
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .summary h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .count-item {
+      text-align: center;
+    }
+
+    .count-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--blue);
+    }
+
+    .count-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .note-box {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      padding: 24px 32px;
+      background: #FFF8F0;
+      border-left: 3px solid var(--pink);
+    }
+
+    .note-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .note-box p, .note-box li {
+      font-size: 0.92rem;
+    }
+
+    .note-box ul {
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+
+    .note-box li {
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ---- Tree Diagram ---- */
+    .tree-section {
+      max-width: 900px;
+      margin: 40px auto 50px;
+      padding: 0 24px;
+    }
+
+    .tree-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .tree-section > p {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 32px;
+    }
+
+    .tree {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      line-height: 2.2;
+      background: var(--bg-warm);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      overflow-x: auto;
+    }
+
+    .tree .root {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+
+    .tree .branch {
+      color: var(--body);
+      padding-left: 0;
+    }
+
+    .tree .leaf {
+      padding-left: 28px;
+      color: var(--body);
+    }
+
+    .tree .sub-leaf {
+      padding-left: 56px;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .tree .t-service { color: var(--blue); font-weight: 500; }
+    .tree .t-location { color: #b8808a; font-weight: 500; }
+    .tree .t-blog { color: #8B6F5E; font-weight: 500; }
+    .tree .t-core { color: #555; font-weight: 500; }
+
+    .tree .connector {
+      color: #ccc;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      .page-grid { grid-template-columns: 1fr; }
+      .count-grid { grid-template-columns: repeat(2, 1fr); }
+      .header h1 { font-size: 1.6rem; }
+      .tree { font-size: 0.74rem; padding: 20px 16px; }
+      .tree .leaf { padding-left: 20px; }
+      .tree .sub-leaf { padding-left: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="badge">Site Architecture Proposal</div>
+    <h1>Chana Mirel Photography</h1>
+    <p>Here's a map of every page we're planning for your new website. Each page is designed to help families in Baltimore find you when they search online or ask AI assistants like ChatGPT.</p>
+  </div>
+
+  <div class="intro">
+    <h2>How to read this</h2>
+    <p>Below are the pages grouped by type. <strong>Blue cards</strong> are your main service pages. <strong>Pink cards</strong> are location pages that help people in specific neighborhoods find you. <strong>Brown cards</strong> are blog posts that answer common questions. <strong>Gray cards</strong> are standard pages every site needs.</p>
+    <p>You don't need to write any of this content. I'll handle all the writing. Just let me know if you want to add, remove, or change anything.</p>
+  </div>
+
+  <!-- Tree Diagram -->
+  <div class="tree-section">
+    <h2>Your Website Structure</h2>
+    <p>This shows how all the pages connect to each other. The lines show which pages link to which.</p>
+    <div class="tree">
+      <div class="root">chanamirelphotography.com</div>
+      <div class="leaf"><span class="connector">|</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-core">Home</span> <span style="color:#ccc">(main landing page, links to everything)</span></div>
+      <div class="leaf"><span class="connector">|</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-core">About Chana Mirel</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-core">Portfolio / Gallery</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-core">Contact / Inquire</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-core">FAQ</span></div>
+      <div class="leaf"><span class="connector">|</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-service">Services</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Newborn Photography</span> <span style="color:#ccc">/baltimore-newborn-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Baby / Sitter Sessions</span> <span style="color:#ccc">/baltimore-baby-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Cake Smash / First Birthday</span> <span style="color:#ccc">/baltimore-cake-smash-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Maternity Photography</span> <span style="color:#ccc">/baltimore-maternity-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Family Portraits</span> <span style="color:#ccc">/baltimore-family-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Headshots / Personal Branding</span> <span style="color:#ccc">/baltimore-headshot-photographer</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Sports / Action Photography</span> <span style="color:#ccc">/sports-photographer-baltimore</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-service">Mini Sessions</span> <span style="color:#ccc">/baltimore-mini-sessions</span></div>
+      <div class="leaf"><span class="connector">|</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-location">Locations</span> <span style="color:#ccc">(for families in your surrounding areas)</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-location">Towson MD</span> <span style="color:#ccc">/photographer-towson-md</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-location">Owings Mills</span> <span style="color:#ccc">/photographer-owings-mills-md</span></div>
+      <div class="sub-leaf"><span class="connector">|   +--</span> <span class="t-location">Lutherville-Timonium</span> <span style="color:#ccc">/photographer-lutherville-timonium</span></div>
+      <div class="leaf"><span class="connector">|</span></div>
+      <div class="leaf"><span class="connector">+--</span> <span class="t-blog">Blog</span> <span style="color:#ccc">(answers common questions, builds trust)</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">When to Schedule Newborn Photos</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">Studio vs. In-Home Sessions</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">How to Choose a Newborn Photographer</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">Cake Smash Session Tips</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">What to Wear for Family Photos</span></div>
+      <div class="sub-leaf"><span class="connector">    +--</span> <span class="t-blog">Newborn Photography Pricing Guide</span></div>
+    </div>
+  </div>
+
+  <!-- Summary Box -->
+  <div class="summary">
+    <h2>At a Glance</h2>
+    <div class="count-grid">
+      <div class="count-item">
+        <div class="count-num">8</div>
+        <div class="count-label">Service Pages</div>
+      </div>
+      <div class="count-item">
+        <div class="count-num">3</div>
+        <div class="count-label">Location Pages</div>
+      </div>
+      <div class="count-item">
+        <div class="count-num">6</div>
+        <div class="count-label">Blog Posts</div>
+      </div>
+      <div class="count-item">
+        <div class="count-num">5</div>
+        <div class="count-label">Core Pages</div>
+      </div>
+    </div>
+    <p style="font-family:'Outfit',sans-serif; font-size:0.82rem; color:var(--muted);">22 pages total. Each one targets specific searches that families in Baltimore are already making.</p>
+  </div>
+
+  <div class="sitemap">
+
+    <!-- TIER 1: Core Pages -->
+    <div class="tier">
+      <div class="tier-header">
+        <span class="tier-num">Core</span>
+        <span class="tier-title">Main Pages</span>
+      </div>
+      <div class="tier-desc">These are the pages visitors see in your main navigation. They set the tone for your whole site.</div>
+      <div class="page-grid">
+        <div class="page-card">
+          <span class="tag tag-legal">Core</span>
+          <div class="page-name">Home</div>
+          <div class="page-url">/</div>
+          <div class="page-desc">Your main landing page with the heart baby image, services overview, testimonials, and contact form.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-legal">Core</span>
+          <div class="page-name">About Chana Mirel</div>
+          <div class="page-url">/about</div>
+          <div class="page-desc">Your story, your studio, what makes your sessions special. Families want to know who's photographing their baby.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-legal">Core</span>
+          <div class="page-name">Portfolio / Gallery</div>
+          <div class="page-url">/gallery</div>
+          <div class="page-desc">Your best work organized by session type. This is where people fall in love with your photography.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-legal">Core</span>
+          <div class="page-name">Contact / Inquire</div>
+          <div class="page-url">/contact</div>
+          <div class="page-desc">Inquiry form with session type dropdown, plus your studio location and hours.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-legal">Core</span>
+          <div class="page-name">FAQ</div>
+          <div class="page-url">/faq</div>
+          <div class="page-desc">Common questions about sessions, pricing, what to bring, when to book, etc.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2: Service Pages -->
+    <div class="tier">
+      <div class="tier-header">
+        <span class="tier-num">Services</span>
+        <span class="tier-title">Individual Service Pages</span>
+      </div>
+      <div class="tier-desc">Each service gets its own page. This is the #1 thing that helps people find you when they search "cake smash photographer Baltimore" or "newborn photographer near me." Your main competitor Elisheva Kutner has dedicated pages for each service, and that's a big reason she shows up everywhere online.</div>
+      <div class="page-grid">
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Newborn Photography</div>
+          <div class="page-url">/baltimore-newborn-photographer</div>
+          <div class="page-desc">Your #1 service. Everything about your newborn sessions: timing, what to expect, the heart wrap, sample images.</div>
+          <div class="page-why">Targets: "best newborn photographer baltimore," "newborn photos baltimore md"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Baby / Sitter Sessions</div>
+          <div class="page-url">/baltimore-baby-photographer</div>
+          <div class="page-desc">For babies 3-12 months. Milestone sessions, sitting sessions, first expressions.</div>
+          <div class="page-why">Targets: "baby photographer baltimore," "sitter session photographer"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Cake Smash / First Birthday</div>
+          <div class="page-url">/baltimore-cake-smash-photographer</div>
+          <div class="page-desc">First birthday celebrations. Custom themes, setup included, the messy fun captured beautifully.</div>
+          <div class="page-why">Targets: "cake smash photographer baltimore" (Kutner owns this now, we take it back)</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Maternity Photography</div>
+          <div class="page-url">/baltimore-maternity-photographer</div>
+          <div class="page-desc">Studio and outdoor maternity sessions. Best at 28-34 weeks.</div>
+          <div class="page-why">Targets: "maternity photographer baltimore md," "pregnancy photos near me"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Family Portraits</div>
+          <div class="page-url">/baltimore-family-photographer</div>
+          <div class="page-desc">Family sessions in studio. All ages, all sizes.</div>
+          <div class="page-why">Targets: "family photographer baltimore," "family portrait photographer near me"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Headshots / Personal Branding</div>
+          <div class="page-url">/baltimore-headshot-photographer</div>
+          <div class="page-desc">Professional headshots and personal branding shoots. LinkedIn, business, and team photos.</div>
+          <div class="page-why">Targets: "headshot photographer baltimore," "personal branding photographer"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Sports / Action Photography</div>
+          <div class="page-url">/sports-photographer-baltimore</div>
+          <div class="page-desc">Youth sports, action shots, team portraits.</div>
+          <div class="page-why">Targets: "sports photographer baltimore," "youth sports photos"</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-service">Service</span>
+          <div class="page-name">Mini Sessions</div>
+          <div class="page-url">/baltimore-mini-sessions</div>
+          <div class="page-desc">Seasonal mini sessions (Christmas, Mother's Day, etc). Shorter, more affordable, great for first-timers.</div>
+          <div class="page-why">Targets: "mini sessions baltimore," "mini photo session near me"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3: Location Pages -->
+    <div class="tier">
+      <div class="tier-header">
+        <span class="tier-num">Locations</span>
+        <span class="tier-title">Neighborhood Pages</span>
+      </div>
+      <div class="tier-desc">These pages help families in specific areas find you. Right now, when someone searches "newborn photographer Towson," they mostly get Yelp and directory results because no photographer has claimed that search. These pages fix that.</div>
+      <div class="page-grid">
+        <div class="page-card">
+          <span class="tag tag-location">Location</span>
+          <div class="page-name">Towson MD Photographer</div>
+          <div class="page-url">/photographer-towson-md</div>
+          <div class="page-desc">For families in Towson. Mentions proximity to your studio, local landmarks, and all your services.</div>
+          <div class="page-why">Wide open SERP. Only directories ranking now. Easy page 1.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-location">Location</span>
+          <div class="page-name">Owings Mills Photographer</div>
+          <div class="page-url">/photographer-owings-mills-md</div>
+          <div class="page-desc">For families in Owings Mills and Stevenson area.</div>
+          <div class="page-why">No photographer targeting this. Quick win.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-location">Location</span>
+          <div class="page-name">Lutherville-Timonium Photographer</div>
+          <div class="page-url">/photographer-lutherville-timonium</div>
+          <div class="page-desc">For families in Lutherville, Timonium, and Cockeysville area.</div>
+          <div class="page-why">Kutner has a Towson page but not this area. Open territory.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 4: Blog Posts -->
+    <div class="tier">
+      <div class="tier-header">
+        <span class="tier-num">Blog</span>
+        <span class="tier-title">Blog Posts</span>
+      </div>
+      <div class="tier-desc">These answer the questions parents are already Googling. When someone reads your blog post about "when to schedule newborn photos," they're already thinking about booking. These posts also get cited by AI assistants like ChatGPT and Google AI, which means your name shows up when people ask AI for photographer recommendations.</div>
+      <div class="page-grid">
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">When to Schedule Newborn Photos</div>
+          <div class="page-url">/blog/when-to-schedule-newborn-photos</div>
+          <div class="page-desc">The ideal timing (5-14 days), why it matters, what happens if you wait too long. Ends with a CTA to book.</div>
+          <div class="page-why">15 AI citations found for this query. High opportunity.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">Studio vs. In-Home Newborn Sessions</div>
+          <div class="page-url">/blog/studio-vs-in-home-newborn-photography</div>
+          <div class="page-desc">Pros and cons of each. Position your studio as the premium choice.</div>
+          <div class="page-why">14 AI citations. Parents actively research this before booking.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">How to Choose a Newborn Photographer</div>
+          <div class="page-url">/blog/how-to-choose-newborn-photographer</div>
+          <div class="page-desc">What to look for: safety, experience, style, reviews. Naturally positions you as the expert.</div>
+          <div class="page-why">11 AI citations. You become the authority answering the question.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">Cake Smash Session Tips</div>
+          <div class="page-url">/blog/cake-smash-session-tips</div>
+          <div class="page-desc">How to prepare, what to bring, what themes work. Shows your expertise.</div>
+          <div class="page-why">12 AI citations for first birthday queries. Big opportunity.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">What to Wear for Family Photos</div>
+          <div class="page-url">/blog/what-to-wear-family-photos</div>
+          <div class="page-desc">Outfit coordination tips, color palettes, what to avoid. Parents always ask this.</div>
+          <div class="page-why">Classic evergreen content. Converts browsers into bookers.</div>
+        </div>
+        <div class="page-card">
+          <span class="tag tag-blog">Blog</span>
+          <div class="page-name">Newborn Photography Pricing Guide</div>
+          <div class="page-url">/blog/newborn-photography-pricing-baltimore</div>
+          <div class="page-desc">What to expect price-wise in Baltimore. Positions your pricing as fair for the quality.</div>
+          <div class="page-why">Price is the #1 thing parents search after finding a photographer.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Note Box -->
+  <div class="note-box">
+    <h3>A note about neighborhoods</h3>
+    <p>Canton, Fells Point, and Federal Hill are all Baltimore City neighborhoods. Instead of giving each one its own page, I'll mention them throughout your main Baltimore service pages. This keeps the site clean while still helping people in those areas find you.</p>
+    <p style="margin-top:8px;">If you want to add more suburb pages later (Pikesville, Columbia, Ellicott City), we can always expand.</p>
+  </div>
+
+  <div class="note-box">
+    <h3>What I need from you</h3>
+    <ul>
+      <li>Does this list cover all the services you want to promote?</li>
+      <li>Any pages you want to add or remove?</li>
+      <li>Are there neighborhoods or areas I'm missing that you serve?</li>
+      <li>Anything else you want on the site?</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>Prepared by Zechariah Tokar for Chana Mirel Photography | April 2026</p>
+  </div>
+
+</body>
+</html>

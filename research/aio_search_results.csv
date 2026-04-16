@@ -1,0 +1,21 @@
+run_at_utc,query,intent,priority,has_ai_overview,citation_count,search_status
+2026-04-16T21:03:35.401452+00:00,best newborn photographer baltimore,bofu,high,False,0,Success
+2026-04-16T21:03:35.401452+00:00,baltimore cake smash photographer,bofu,high,True,11,Success
+2026-04-16T21:03:35.401452+00:00,maternity photographer baltimore md,bofu,high,False,0,Success
+2026-04-16T21:03:35.401452+00:00,headshot photographer baltimore,bofu,high,False,0,Success
+2026-04-16T21:03:35.401452+00:00,family photographer baltimore,bofu,high,False,0,Success
+2026-04-16T21:03:35.401452+00:00,best baby photographer near me baltimore,bofu,high,True,9,Success
+2026-04-16T21:03:35.401452+00:00,newborn photographer towson md,bofu,medium,False,0,Success
+2026-04-16T21:03:35.401452+00:00,photographer for first birthday baltimore,bofu,medium,True,12,Success
+2026-04-16T21:03:35.401452+00:00,personal branding photographer baltimore,bofu,medium,True,0,Success
+2026-04-16T21:03:35.401452+00:00,mini session photographer baltimore,bofu,medium,True,9,Success
+2026-04-16T21:03:35.401452+00:00,when to schedule newborn photos,informational,medium,True,15,Success
+2026-04-16T21:03:35.401452+00:00,how to choose a newborn photographer,informational,medium,True,11,Success
+2026-04-16T21:03:35.401452+00:00,what to wear for family photos,informational,medium,False,0,Success
+2026-04-16T21:03:35.401452+00:00,newborn photography studio vs at home,comparison,medium,True,14,Success
+2026-04-16T21:03:35.401452+00:00,best maternity photographers in maryland,solution-aware,medium,True,10,Success
+2026-04-16T21:03:35.401452+00:00,affordable family photographer baltimore area,problem-aware,medium,False,0,Success
+2026-04-16T21:03:35.401452+00:00,baltimore photographer for corporate headshots,bofu,medium,True,0,Success
+2026-04-16T21:03:35.401452+00:00,sitter session photographer baltimore,bofu,low,True,10,Success
+2026-04-16T21:03:35.401452+00:00,sports photographer baltimore youth,bofu,low,True,0,Success
+2026-04-16T21:03:35.401452+00:00,milk bath baby photographer baltimore,bofu,low,True,10,Success
