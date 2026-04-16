@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chana Mirel Photography - Redesign Concepts V2</title>
-  <link rel="stylesheet" href="styles/v2.css">
+  <title>Chana Mirel Photography - Redesign Concepts</title>
+  <link rel="stylesheet" href="styles/v3-base.css">
   <style>
     body {
       background: #FAF8F5;
@@ -19,7 +19,7 @@
     }
 
     .picker-inner {
-      max-width: 960px;
+      max-width: 1060px;
       text-align: center;
     }
 
@@ -32,70 +32,6 @@
       font-size: 1.1rem;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .version-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 48px;
-    }
-
-    .version-card {
-      background: #FFFFFF;
-      padding: 44px 32px;
-      text-align: center;
-      border: 1px solid rgba(0,0,0,0.06);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      display: block;
-      color: #1a1a1a;
-      position: relative;
-    }
-
-    .version-card:hover {
-      border-color: #C4A882;
-      box-shadow: 0 12px 40px rgba(139, 111, 94, 0.1);
-      color: #1a1a1a;
-      transform: translateY(-6px);
-    }
-
-    .version-card:active {
-      transform: translateY(-2px);
-    }
-
-    .version-card .letter {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #C4A882;
-      margin-bottom: 16px;
-      letter-spacing: -0.02em;
-      line-height: 1;
-    }
-
-    .version-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #8B6F5E;
-      margin-bottom: 16px;
-    }
-
-    .version-card p {
-      font-size: 0.95rem;
-      color: #777;
-      line-height: 1.7;
-      max-width: none;
-    }
-
-    .note {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      color: #999;
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.8;
     }
 
     .badge {
@@ -111,12 +47,139 @@
       margin-bottom: 28px;
     }
 
+    /* V3 Section */
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8B6F5E;
+      margin-bottom: 32px;
+    }
+
+    .version-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .version-card {
+      background: #FFFFFF;
+      padding: 44px 32px;
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+      display: block;
+      color: #1a1a1a;
+    }
+
+    .version-card:hover {
+      border-color: #C4A882;
+      box-shadow: 0 12px 40px rgba(139, 111, 94, 0.1);
+      color: #1a1a1a;
+      transform: translateY(-6px);
+    }
+
+    .version-card .letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .version-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .version-card p {
+      font-size: 0.95rem;
+      color: #777;
+      line-height: 1.7;
+      max-width: none;
+    }
+
+    /* Color-coded cards */
+    .card-blue .letter { color: #58A6D8; }
+    .card-blue h3 { color: #58A6D8; }
+    .card-blue:hover { border-color: #58A6D8; box-shadow: 0 12px 40px rgba(88, 166, 216, 0.12); }
+
+    .card-blush .letter { color: #c89aa3; }
+    .card-blush h3 { color: #c89aa3; }
+    .card-blush:hover { border-color: #F4B6C0; box-shadow: 0 12px 40px rgba(244, 182, 192, 0.12); }
+
+    .card-neutral .letter { color: #C4A882; }
+    .card-neutral h3 { color: #8B6F5E; }
+    .card-neutral:hover { border-color: #C4A882; box-shadow: 0 12px 40px rgba(196, 168, 130, 0.12); }
+
+    .swatch {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .swatch span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .note {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      color: #999;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Previous versions */
+    .previous {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .prev-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .prev-links a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #999;
+      padding: 8px 20px;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .prev-links a:hover {
+      color: #8B6F5E;
+      border-color: #C4A882;
+    }
+
     @media (max-width: 768px) {
       .version-cards {
         grid-template-columns: 1fr;
         gap: 16px;
       }
       .picker { padding: 40px 24px; }
+      .prev-links { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -124,31 +187,58 @@
 
   <div class="picker">
     <div class="picker-inner">
-      <div class="badge">V2 - Taste Skill Redesign</div>
+      <div class="badge">Round 2 - Based on your feedback</div>
       <p class="label" style="margin-bottom: 16px;">Website Redesign</p>
       <h1>Chana Mirel Photography</h1>
       <div class="divider-center"></div>
-      <p>Three homepage concepts, each upgraded with premium typography, refined spacing, scroll animations, and polished interactive states. Click any to view the full page.</p>
+      <p>Based on your feedback, here are three new versions. All use the A+C hybrid layout you liked, with three different color directions. Click any to see the full homepage.</p>
 
       <div class="version-cards">
-        <a href="version-a.html" class="version-card">
-          <div class="letter">A</div>
-          <h3>Classic Editorial</h3>
-          <p>Three portrait images in the hero, clean text sections below. Closest to the Elisheva Kutner inspiration.</p>
+        <a href="version-d.html" class="version-card card-blue">
+          <div class="letter">D</div>
+          <div class="swatch">
+            <span style="background:#58A6D8;"></span>
+            <span style="background:#F4B6C0;"></span>
+            <span style="background:#FFFFFF;"></span>
+            <span style="background:#1a2a3a;"></span>
+          </div>
+          <h3>Blue Heirloom</h3>
+          <p>Your original blue and pink colors from your current site, with the clean editorial layout inspired by Kutner. Classic, calming, professional.</p>
         </a>
-        <a href="version-b.html" class="version-card">
-          <div class="letter">B</div>
-          <h3>Zigzag Story</h3>
-          <p>Full hero image with text overlay, then alternating image-and-text sections for each session type. Dynamic storytelling flow.</p>
+        <a href="version-e.html" class="version-card card-blush">
+          <div class="letter">E</div>
+          <div class="swatch">
+            <span style="background:#c89aa3;"></span>
+            <span style="background:#F4B6C0;"></span>
+            <span style="background:#FFF8F9;"></span>
+            <span style="background:#2e2226;"></span>
+          </div>
+          <h3>Blush Editorial</h3>
+          <p>Soft dusty rose palette with a reversed layout and unique session picker. Feminine, warm, and clearly different from Kutner's dark brown aesthetic.</p>
         </a>
-        <a href="version-c.html" class="version-card">
-          <div class="letter">C</div>
-          <h3>Gallery Grid</h3>
-          <p>Asymmetric image grid hero, portfolio showcase, and a photography-forward layout that lets the work speak first.</p>
+        <a href="version-f.html" class="version-card card-neutral">
+          <div class="letter">F</div>
+          <div class="swatch">
+            <span style="background:#8B6F5E;"></span>
+            <span style="background:#C4A882;"></span>
+            <span style="background:#FAF8F5;"></span>
+            <span style="background:#1e1e1e;"></span>
+          </div>
+          <h3>Warm Neutral</h3>
+          <p>The elevated taupe and gold from our earlier mockups, restructured with your preferred layout. Sophisticated, timeless, gallery-like.</p>
         </a>
       </div>
 
-      <p class="note">All concepts share the same upgraded design system: Playfair Display + Cormorant Garamond + Outfit fonts, glassmorphism navigation, scroll-reveal animations, tinted shadows, white gaps between photos, and sharp corners. Stock placeholder photos will be swapped for real images during the build.</p>
+      <p class="note">All three versions share the same A+C hybrid structure you liked: asymmetric image grid hero, session picker, portfolio gallery, about section, stats bar, and contact form. Each version has unique section arrangements so pages won't feel copy-paste. Stock placeholder photos will be replaced with your real images.</p>
+
+      <div class="previous">
+        <p class="note">Previous round (A, B, C):</p>
+        <div class="prev-links">
+          <a href="version-a.html">Version A</a>
+          <a href="version-b.html">Version B</a>
+          <a href="version-c.html">Version C</a>
+        </div>
+      </div>
     </div>
   </div>
 
