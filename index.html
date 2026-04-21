@@ -3,265 +3,355 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chana Mirel Photography - Redesign Concepts</title>
+  <meta name="theme-color" content="#58A6D8">
+  <title>Chana Mirel Photography | Baltimore Newborn, Maternity, Cake Smash &amp; Family Photographer | Studio Sessions in 21209 | 100+ Five-Star Reviews | 8 Years Experience</title>
+  <meta name="description" content="Chana Mirel Photography is a Baltimore studio photographer specializing in newborn, maternity, cake smash, and family portraits. 100+ five-star reviews. Book your session today.">
+  <link rel="canonical" href="https://chanamirelphotography.com/">
+  <link rel="preload" as="image" href="images/real/NB_BLUE_HEART_Smith.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles/base.css">
-  <style>
-    body {
-      background: #FAF8F5;
-    }
-
-    .picker {
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 40px;
-    }
-
-    .picker-inner {
-      max-width: 1060px;
-      text-align: center;
-    }
-
-    .picker-inner h1 {
-      margin-bottom: 8px;
-    }
-
-    .picker-inner > p {
-      margin-bottom: 48px;
-      font-size: 1.1rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .badge {
-      display: inline-block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #58A6D8;
-      border: 1px solid rgba(88, 166, 216, 0.3);
-      padding: 4px 12px;
-      margin-bottom: 28px;
-    }
-
-    .section-label {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #8B6F5E;
-      margin-bottom: 32px;
-    }
-
-    .version-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-      margin-bottom: 48px;
-    }
-
-    .version-card {
-      background: #FFFFFF;
-      padding: 44px 32px;
-      text-align: center;
-      border: 1px solid rgba(0,0,0,0.06);
-      transition: all 0.4s ease;
-      display: block;
-      color: #1a1a1a;
-    }
-
-    .version-card:hover {
-      border-color: #58A6D8;
-      box-shadow: 0 12px 40px rgba(88, 166, 216, 0.12);
-      color: #1a1a1a;
-      transform: translateY(-6px);
-    }
-
-    .version-card .letter {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 16px;
-      letter-spacing: -0.02em;
-      line-height: 1;
-      color: #58A6D8;
-    }
-
-    .version-card h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      color: #58A6D8;
-    }
-
-    .version-card p {
-      font-size: 0.95rem;
-      color: #777;
-      line-height: 1.7;
-      max-width: none;
-    }
-
-    .feature-list {
-      list-style: none;
-      text-align: left;
-      margin-top: 20px;
-      padding: 0;
-    }
-
-    .feature-list li {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      color: #666;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .feature-list li::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: #58A6D8;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .swatch {
-      display: flex;
-      gap: 6px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .swatch span {
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      border: 1px solid rgba(0,0,0,0.06);
-    }
-
-    .note {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      color: #999;
-      max-width: 620px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    .previous {
-      margin-top: 60px;
-      padding-top: 40px;
-      border-top: 1px solid rgba(0,0,0,0.06);
-    }
-
-    .prev-links {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 16px;
-      flex-wrap: wrap;
-    }
-
-    .prev-links a {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #999;
-      padding: 6px 16px;
-      border: 1px solid rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-    }
-
-    .prev-links a:hover {
-      color: #58A6D8;
-      border-color: #58A6D8;
-    }
-
-    @media (max-width: 768px) {
-      .version-cards {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .picker { padding: 40px 24px; }
-      .prev-links { flex-direction: column; align-items: center; }
-    }
-  </style>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chana Mirel Photography | Baltimore Newborn &amp; Family Photographer">
+  <meta property="og:description" content="Studio newborn, maternity, cake smash, and family portraits in Baltimore. 100+ five-star reviews, 8 years experience.">
+  <meta property="og:image" content="images/real/NB_BLUE_HEART_Smith.jpg">
+  <meta property="og:url" content="https://chanamirelphotography.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhotographStudio",
+    "name": "Chana Mirel Photography",
+    "image": "https://chanamirelphotography.com/images/logos/Signature_Logo_Black.png",
+    "url": "https://chanamirelphotography.com/",
+    "telephone": "+1-410-262-7773",
+    "email": "chanamirelphotography@gmail.com",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2376 Sweet Meadow Road",
+      "addressLocality": "Baltimore",
+      "addressRegion": "MD",
+      "postalCode": "21209",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Baltimore" },
+      { "@type": "City", "name": "Canton" },
+      { "@type": "City", "name": "Towson" },
+      { "@type": "City", "name": "Owings Mills" },
+      { "@type": "City", "name": "Lutherville-Timonium" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "100"
+    },
+    "founder": { "@type": "Person", "name": "Chana Mirel Ryback" },
+    "foundingDate": "2018"
+  }
+  </script>
 </head>
 <body>
 
-  <div class="picker">
-    <div class="picker-inner">
-      <div class="badge">Round 3 - With Your Real Photos & Logos</div>
-      <p class="label" style="margin-bottom: 16px;">Website Redesign</p>
-      <h1>Chana Mirel Photography</h1>
-      <div class="divider-center"></div>
-      <p>Based on your feedback, here are two new versions using your real portfolio images and logos. Both use your blue + pink palette with a black footer. They differ in layout approach. Click either to see the full homepage.</p>
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Chana Mirel Photography home">
+        <img src="images/logos/Signature_Logo_Black.png" alt="Chana Mirel Photography" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/newborn-photography">Newborn</a></li>
+        <li><a href="/services/maternity-photography">Maternity</a></li>
+        <li><a href="/services/cake-smash-milestone">Cake Smash</a></li>
+        <li><a href="/services/family-photography">Family</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact" class="btn btn-primary" style="padding:10px 24px;font-size:0.62rem;">Inquire</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-      <div class="version-cards">
-        <a href="version-g.html" class="version-card">
-          <div class="letter">G</div>
-          <div class="swatch">
-            <span style="background:#58A6D8;"></span>
-            <span style="background:#F4B6C0;"></span>
-            <span style="background:#FFFFFF;"></span>
-            <span style="background:#111111;"></span>
-          </div>
-          <h3>Clean Gallery</h3>
-          <p>Full-width heart image hero, 4-card services grid, masonry gallery, and numbered "What to Expect" cards.</p>
-          <ul class="feature-list">
-            <li>Heart baby image as the hero</li>
-            <li>4-card services grid with your real photos</li>
-            <li>Masonry-style portfolio gallery</li>
-            <li>Numbered experience cards</li>
-            <li>Your real logo in nav + footer</li>
-          </ul>
-        </a>
-        <a href="version-h.html" class="version-card">
-          <div class="letter">H</div>
-          <div class="swatch">
-            <span style="background:#58A6D8;"></span>
-            <span style="background:#F4B6C0;"></span>
-            <span style="background:#FFFFFF;"></span>
-            <span style="background:#111111;"></span>
-          </div>
-          <h3>Editorial Storytelling</h3>
-          <p>Asymmetric 3-image hero, full-width editorial service blocks, side-by-side testimonial, and a dramatic heart banner.</p>
-          <ul class="feature-list">
-            <li>Asymmetric 3-image hero grid</li>
-            <li>Large editorial service blocks (alternating)</li>
-            <li>Heart image as full-width banner with CTA</li>
-            <li>Side-by-side testimonial with portrait</li>
-            <li>Icon-based experience section</li>
-          </ul>
-        </a>
+  <!-- ========== HERO: 3-IMAGE GRID (Chana's pick — H-style, heart prominent) ========== -->
+  <section class="hero-grid">
+    <div class="large">
+      <img src="images/real/NB_BLUE_HEART_Smith.jpg" alt="Newborn baby in a blue heart wrap at Chana Mirel Photography Baltimore studio">
+    </div>
+    <div class="small-stack">
+      <div><img src="images/real/stella-1098.jpg" alt="Sitter baby session in Baltimore studio"></div>
+      <div><img src="images/real/CAKESMASH_Eum.jpg" alt="First birthday cake smash in Baltimore studio"></div>
+    </div>
+  </section>
+
+  <section class="hero-intro">
+    <p class="label reveal">Baltimore Newborn &amp; Family Photography</p>
+    <h1 class="reveal reveal-delay-1">Studio portraits that feel like home.</h1>
+    <div class="divider-center reveal reveal-delay-2"></div>
+    <p class="reveal reveal-delay-2">I'm Chana. I've photographed over 500 Baltimore families in my Pikesville studio across eight years. Newborns, maternity, cake smash, and family portraits. No rushing. No cold sets. Just honest light and real quiet.</p>
+    <div class="reveal reveal-delay-3" style="margin-top:24px;">
+      <a href="/contact" class="btn btn-primary">Inquire about a session</a>
+    </div>
+  </section>
+
+  <!-- ========== COUNT-UP STATS ========== -->
+  <section class="stats-countup reveal" aria-label="By the numbers">
+    <div>
+      <div class="stat-num-wrap"><span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span></div>
+      <p class="stat-label">Five-star reviews</p>
+    </div>
+    <div>
+      <div class="stat-num-wrap"><span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span></div>
+      <p class="stat-label">Families photographed</p>
+    </div>
+    <div>
+      <div class="stat-num-wrap"><span class="stat-num" data-target="8">0</span></div>
+      <p class="stat-label">Years in business</p>
+    </div>
+    <div>
+      <div class="stat-num-wrap"><span class="stat-num" data-target="1">0</span></div>
+      <p class="stat-label">Baltimore studio</p>
+    </div>
+  </section>
+
+  <!-- ========== INTRO PARAGRAPH ABOUT CHANA (her explicit ask: before services) ========== -->
+  <section class="intro-block">
+    <p class="label reveal">About Chana</p>
+    <h2 class="reveal reveal-delay-1">Photography that's meaningful, classy, and honest.</h2>
+    <div class="divider-center reveal reveal-delay-2"></div>
+    <p class="reveal reveal-delay-2">Chana Mirel Photography is a fine-art studio on Sweet Meadow Road. I specialize in babies in their first year, maternity in the final trimester, and family portraits that aren't stiff. Clients drive in from Canton, Towson, Owings Mills, and across Baltimore County. The studio is private, warm, and built for small humans who need extra patience.</p>
+  </section>
+
+  <!-- ========== SERVICES GRID ========== -->
+  <section class="section" style="padding-top:20px;">
+    <div class="container text-center">
+      <p class="label reveal">Sessions</p>
+      <h2 class="reveal reveal-delay-1">Explore our services</h2>
+      <div class="divider-center reveal reveal-delay-2"></div>
+    </div>
+    <div class="services-grid-home">
+      <a href="/services/newborn-photography" class="service-card reveal">
+        <img src="images/real/NB_Willis-5460.jpg" alt="Newborn photography in Baltimore">
+        <div class="service-card-label"><span>Newborn</span><small>5-14 days</small></div>
+      </a>
+      <a href="/services/cake-smash-milestone" class="service-card reveal reveal-delay-1">
+        <img src="images/real/CAKESMASH_Eum.jpg" alt="Cake smash and milk bath first birthday">
+        <div class="service-card-label"><span>Cake Smash</span><small>First birthday</small></div>
+      </a>
+      <a href="/services/maternity-photography" class="service-card reveal reveal-delay-2">
+        <img src="images/real/PORTRAITS_Naam.jpg" alt="Studio maternity photography Baltimore">
+        <div class="service-card-label"><span>Maternity</span><small>Studio only</small></div>
+      </a>
+      <a href="/services/headshots-personal-branding" class="service-card reveal reveal-delay-3">
+        <img src="images/real/HEADSHOT_Mason.jpg" alt="Professional headshot photography Baltimore">
+        <div class="service-card-label"><span>Headshots</span><small>Personal branding</small></div>
+      </a>
+    </div>
+  </section>
+
+  <style>
+    .services-grid-home {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 1200px;
+      margin: 36px auto 0;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+    .services-grid-home .service-card {
+      position: relative; overflow: hidden; display: block;
+    }
+    .services-grid-home .service-card img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform .7s ease;
+    }
+    .services-grid-home .service-card:hover img { transform: scale(1.04); }
+    .services-grid-home .service-card-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 24px 16px; background: linear-gradient(transparent, rgba(0,0,0,.6)); text-align: center;
+    }
+    .services-grid-home .service-card-label span {
+      font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.22em;
+      text-transform:uppercase;color:#fff;display:block;
+    }
+    .services-grid-home .service-card-label small {
+      display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+      color:rgba(255,255,255,.8);margin-top:6px;font-size:.82rem;
+    }
+    @media (max-width:900px){ .services-grid-home{grid-template-columns:1fr 1fr} }
+    @media (max-width:480px){ .services-grid-home{grid-template-columns:1fr} }
+  </style>
+
+  <!-- ========== ZIGZAG SECTIONS (her revived pic-text layout) ========== -->
+  <section class="zigzag reveal">
+    <div class="zigzag-image">
+      <img src="images/real/NB_Strauss-0637.jpg" alt="Newborn session at Chana Mirel Photography studio in Baltimore">
+    </div>
+    <div class="zigzag-text">
+      <p class="label">Newborn sessions</p>
+      <h2>The first two weeks, unhurried.</h2>
+      <p>Newborn sessions happen between five and fourteen days old. Baby sleeps, we pose gently, parents rest on the couch. Sessions run two to three hours. Wraps, bonnets, and props are provided.</p>
+      <a href="/services/newborn-photography" class="btn btn-text">Newborn details &rarr;</a>
+    </div>
+  </section>
+
+  <section class="zigzag reversed reveal">
+    <div class="zigzag-image">
+      <img src="images/real/PORTRAITS_Naam.jpg" alt="Studio maternity portrait Baltimore">
+    </div>
+    <div class="zigzag-text">
+      <p class="label">Maternity sessions</p>
+      <h2>Studio maternity, third trimester.</h2>
+      <p>Maternity sessions are studio-only, scheduled between weeks 32 and 36. Gowns and drapes are on site. Sessions are private, warm, and take about an hour. Partners and older children are welcome.</p>
+      <a href="/services/maternity-photography" class="btn btn-text">Maternity details &rarr;</a>
+    </div>
+  </section>
+
+  <section class="zigzag reveal">
+    <div class="zigzag-image">
+      <img src="images/real/CAKESMASH_Eum.jpg" alt="Cake smash first birthday session Baltimore">
+    </div>
+    <div class="zigzag-text">
+      <p class="label">Cake smash &amp; first birthday</p>
+      <h2>Cake, milk bath, and a first-birthday portrait.</h2>
+      <p>The cake smash bundle includes a clean first-birthday portrait, the cake moment, and a milk bath finish. One session, three looks. Outfits provided. Sessions take about ninety minutes and run on your baby's schedule.</p>
+      <a href="/services/cake-smash-milestone" class="btn btn-text">Cake smash details &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ========== WHAT TO EXPECT ========== -->
+  <section class="section-warm">
+    <div class="container text-center">
+      <p class="label reveal">The experience</p>
+      <h2 class="reveal reveal-delay-1">What to expect</h2>
+      <div class="divider-center reveal reveal-delay-2"></div>
+    </div>
+    <div class="expect-grid reveal">
+      <div class="expect-card">
+        <div class="expect-num">01</div>
+        <h3>Inquire and plan</h3>
+        <p>Tell me about your session and your due date. I'll send availability and a short questionnaire within one business day.</p>
       </div>
-
-      <p class="note">Both versions use your real portfolio images, your Signature logo, and your blue + pink color palette. Footer and stats bar are now black (not navy). "Where do you imagine your session?" text has been removed. Each version has a unique layout so you can see how pages can feel different from each other.</p>
-
-      <div class="previous">
-        <p class="note">Previous rounds:</p>
-        <div class="prev-links">
-          <a href="version-d.html">D - Blue Heirloom</a>
-          <a href="version-e.html">E - Blush Editorial</a>
-          <a href="version-f.html">F - Warm Neutral</a>
-          <a href="version-a.html">A - Classic</a>
-          <a href="version-b.html">B - Zigzag</a>
-          <a href="version-c.html">C - Gallery</a>
-        </div>
+      <div class="expect-card">
+        <div class="expect-num">02</div>
+        <h3>Session day</h3>
+        <p>Arrive at the studio on Sweet Meadow Road. Park out front. Everything you need is already here, from wraps to snacks.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-num">03</div>
+        <h3>Gallery and art</h3>
+        <p>Your private gallery is ready in two to three weeks. Order prints, albums, and wall art directly or save your digital files.</p>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- ========== GALLERY PREVIEW ========== -->
+  <section class="section">
+    <div class="container text-center" style="margin-bottom:40px;">
+      <p class="label reveal">Portfolio</p>
+      <h2 class="reveal reveal-delay-1">Recent work</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="img-wrap reveal"><img src="images/real/MILKBATH_Emma.jpg" alt="Milk bath session Baltimore"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/real/stella-1098.jpg" alt="Sitter baby Baltimore"></div>
+      <div class="img-wrap reveal reveal-delay-2"><img src="images/real/CAKESMASH_Eum.jpg" alt="Cake smash Baltimore"></div>
+      <div class="img-wrap reveal reveal-delay-1"><img src="images/real/HEADSHOT_Prero.jpg" alt="Headshot Baltimore"></div>
+      <div class="img-wrap reveal reveal-delay-2"><img src="images/real/NB_Willis-5460.jpg" alt="Newborn portrait Baltimore"></div>
+      <div class="img-wrap reveal reveal-delay-3"><img src="images/real/PORTRAITS_Naam.jpg" alt="Family portrait Baltimore"></div>
+    </div>
+    <div class="text-center" style="margin-top:40px;">
+      <a href="/gallery" class="btn btn-outline">See the full gallery</a>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIAL ========== -->
+  <section class="section testimonial-section section-warm">
+    <div class="testimonial reveal">
+      <blockquote>"Chana is amazing. She photographed both of my daughters as newborns. She is patient, takes her time, and makes sure we get the best shots. I recommend her to every Baltimore family I know."</blockquote>
+      <cite>&mdash; Rebecca M., Baltimore</cite>
+      <div style="margin-top:28px;">
+        <a href="/contact" class="btn btn-primary">Start a session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG TEASER ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <p class="label reveal">Journal</p>
+      <h2 class="reveal reveal-delay-1">Planning your session</h2>
+    </div>
+    <div class="blog-grid">
+      <a href="/blog/when-to-schedule-newborn-photos" class="blog-card reveal">
+        <img src="images/real/NB_Strauss-0637.jpg" alt="When to schedule newborn photos">
+        <p class="label">Newborn</p>
+        <h3>When to schedule newborn photos in Baltimore</h3>
+        <p>The ideal window is five to fourteen days. Here's why, and how to book before it closes.</p>
+      </a>
+      <a href="/blog/cake-smash-session-tips" class="blog-card reveal reveal-delay-1">
+        <img src="images/real/CAKESMASH_Eum.jpg" alt="Cake smash tips">
+        <p class="label">Cake Smash</p>
+        <h3>Cake smash session tips for a calm first birthday</h3>
+        <p>Outfits, timing, and the small tricks that turn a messy hour into a gallery.</p>
+      </a>
+      <a href="/blog/what-to-wear-family-photos" class="blog-card reveal reveal-delay-2">
+        <img src="images/real/PORTRAITS_Naam.jpg" alt="What to wear family photos Baltimore">
+        <p class="label">Family</p>
+        <h3>What to wear for family photos in Baltimore</h3>
+        <p>A simple palette, season-by-season, that photographs beautifully in any season.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== CTA BAND ========== -->
+  <section class="cta-band">
+    <div class="container text-center">
+      <p class="label reveal">Ready when you are</p>
+      <h2 class="reveal reveal-delay-1">Book your Baltimore session</h2>
+      <p class="reveal reveal-delay-2">Sessions book three to six weeks ahead for newborns, longer around holidays. Send a note and I'll get back to you.</p>
+      <div class="reveal reveal-delay-3" style="margin-top:24px;">
+        <a href="/contact" class="btn btn-primary">Inquire now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <img src="images/logos/Signature_White.png" alt="Chana Mirel Photography" class="footer-logo-img" style="height:36px;margin-bottom:16px;opacity:.9;">
+        <p>Baltimore, Maryland</p>
+        <p>2376 Sweet Meadow Road, 21209</p>
+        <p><a href="mailto:chanamirelphotography@gmail.com">chanamirelphotography@gmail.com</a></p>
+        <div class="social-links" style="margin-top:16px;">
+          <a href="https://instagram.com/chanamirelphotography" aria-label="Follow on Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Sessions</h4>
+        <p><a href="/services/newborn-photography">Newborn</a></p>
+        <p><a href="/services/maternity-photography">Maternity</a></p>
+        <p><a href="/services/cake-smash-milestone">Cake Smash</a></p>
+        <p><a href="/services/family-photography">Family</a></p>
+        <p><a href="/services/headshots-personal-branding">Headshots</a></p>
+      </div>
+      <div>
+        <h4>More</h4>
+        <p><a href="/about">About</a></p>
+        <p><a href="/gallery">Gallery</a></p>
+        <p><a href="/blog">Blog</a></p>
+        <p><a href="/faq">FAQ</a></p>
+        <p><a href="/contact">Contact</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chana Mirel Photography. All rights reserved.</p>
+      <p>Baltimore newborn, maternity, and family photographer.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>

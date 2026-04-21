@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chana Mirel Photography - Redesign Concepts</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <style>
+    body {
+      background: #FAF8F5;
+    }
+
+    .picker {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+    }
+
+    .picker-inner {
+      max-width: 1060px;
+      text-align: center;
+    }
+
+    .picker-inner h1 {
+      margin-bottom: 8px;
+    }
+
+    .picker-inner > p {
+      margin-bottom: 48px;
+      font-size: 1.1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #58A6D8;
+      border: 1px solid rgba(88, 166, 216, 0.3);
+      padding: 4px 12px;
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8B6F5E;
+      margin-bottom: 32px;
+    }
+
+    .version-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .version-card {
+      background: #FFFFFF;
+      padding: 44px 32px;
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+      display: block;
+      color: #1a1a1a;
+    }
+
+    .version-card:hover {
+      border-color: #58A6D8;
+      box-shadow: 0 12px 40px rgba(88, 166, 216, 0.12);
+      color: #1a1a1a;
+      transform: translateY(-6px);
+    }
+
+    .version-card .letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: #58A6D8;
+    }
+
+    .version-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: #58A6D8;
+    }
+
+    .version-card p {
+      font-size: 0.95rem;
+      color: #777;
+      line-height: 1.7;
+      max-width: none;
+    }
+
+    .feature-list {
+      list-style: none;
+      text-align: left;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .feature-list li {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      color: #666;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #58A6D8;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .swatch {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .swatch span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .note {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      color: #999;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .previous {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .prev-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .prev-links a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #999;
+      padding: 6px 16px;
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .prev-links a:hover {
+      color: #58A6D8;
+      border-color: #58A6D8;
+    }
+
+    @media (max-width: 768px) {
+      .version-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .picker { padding: 40px 24px; }
+      .prev-links { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="picker">
+    <div class="picker-inner">
+      <div class="badge">Round 3 - With Your Real Photos & Logos</div>
+      <p class="label" style="margin-bottom: 16px;">Website Redesign</p>
+      <h1>Chana Mirel Photography</h1>
+      <div class="divider-center"></div>
+      <p>Based on your feedback, here are two new versions using your real portfolio images and logos. Both use your blue + pink palette with a black footer. They differ in layout approach. Click either to see the full homepage.</p>
+
+      <div class="version-cards">
+        <a href="version-g.html" class="version-card">
+          <div class="letter">G</div>
+          <div class="swatch">
+            <span style="background:#58A6D8;"></span>
+            <span style="background:#F4B6C0;"></span>
+            <span style="background:#FFFFFF;"></span>
+            <span style="background:#111111;"></span>
+          </div>
+          <h3>Clean Gallery</h3>
+          <p>Full-width heart image hero, 4-card services grid, masonry gallery, and numbered "What to Expect" cards.</p>
+          <ul class="feature-list">
+            <li>Heart baby image as the hero</li>
+            <li>4-card services grid with your real photos</li>
+            <li>Masonry-style portfolio gallery</li>
+            <li>Numbered experience cards</li>
+            <li>Your real logo in nav + footer</li>
+          </ul>
+        </a>
+        <a href="version-h.html" class="version-card">
+          <div class="letter">H</div>
+          <div class="swatch">
+            <span style="background:#58A6D8;"></span>
+            <span style="background:#F4B6C0;"></span>
+            <span style="background:#FFFFFF;"></span>
+            <span style="background:#111111;"></span>
+          </div>
+          <h3>Editorial Storytelling</h3>
+          <p>Asymmetric 3-image hero, full-width editorial service blocks, side-by-side testimonial, and a dramatic heart banner.</p>
+          <ul class="feature-list">
+            <li>Asymmetric 3-image hero grid</li>
+            <li>Large editorial service blocks (alternating)</li>
+            <li>Heart image as full-width banner with CTA</li>
+            <li>Side-by-side testimonial with portrait</li>
+            <li>Icon-based experience section</li>
+          </ul>
+        </a>
+      </div>
+
+      <p class="note">Both versions use your real portfolio images, your Signature logo, and your blue + pink color palette. Footer and stats bar are now black (not navy). "Where do you imagine your session?" text has been removed. Each version has a unique layout so you can see how pages can feel different from each other.</p>
+
+      <div class="previous">
+        <p class="note">Previous rounds:</p>
+        <div class="prev-links">
+          <a href="version-d.html">D - Blue Heirloom</a>
+          <a href="version-e.html">E - Blush Editorial</a>
+          <a href="version-f.html">F - Warm Neutral</a>
+          <a href="version-a.html">A - Classic</a>
+          <a href="version-b.html">B - Zigzag</a>
+          <a href="version-c.html">C - Gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
