@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chanamirelphotography.com/sitemap.xml
+Sitemap: https://chanamirelphotography.com/feed.xml
