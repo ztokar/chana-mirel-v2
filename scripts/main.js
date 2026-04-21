@@ -4,28 +4,12 @@
 (() => {
   'use strict';
 
-  // Mark body so CSS can hide .reveal elements only when JS is active.
-  // If JS fails, content stays visible (no opacity:0 by default).
-  document.body.classList.add('js');
-
   // ---- Scroll reveal ----
+  // v0 simple: mark all .reveal elements visible immediately.
+  // (The fancier staggered IO animation can return in production once
+  // we're confident screenshots + bots render reliably.)
   const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length) {
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => {
-      // If element is already in viewport at load (above fold), mark visible immediately
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        el.classList.add('visible');
-      } else {
-        io.observe(el);
-      }
-    });
-  }
+  reveals.forEach(el => el.classList.add('visible'));
 
   // ---- Sticky nav shadow on scroll ----
   const nav = document.getElementById('nav');

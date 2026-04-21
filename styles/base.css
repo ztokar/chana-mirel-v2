@@ -770,22 +770,11 @@ p {
 }
 
 /* ---- Scroll Reveal ---- */
-/* Default: visible. Hidden only when JS has loaded (.js body class). */
-/* This way if JS fails, IO doesn't fire, or a screenshot tool skips animations, content still renders. */
-.reveal {
+/* v0: reveal defaults to fully visible. JS adds .visible to all on load. */
+/* Safe for screenshots, crawlers, and JS-disabled users. */
+.reveal, .reveal.visible {
   opacity: 1;
   transform: none;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-body.js .reveal:not(.visible) {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .reveal-delay-1 { transition-delay: 0.1s; }
