@@ -8,11 +8,11 @@
 
 /* ---- Color Variables (overridden per version) ---- */
 :root {
-  --accent: #8B6F5E;
-  --accent-hover: #7a6050;
-  --accent-light: #C4A882;
-  --accent-glow: rgba(139, 111, 94, 0.2);
-  --accent-subtle: rgba(139, 111, 94, 0.06);
+  --accent: #58A6D8;
+  --accent-hover: #3f8fc4;
+  --accent-light: #F4B6C0;
+  --accent-glow: rgba(88, 166, 216, 0.22);
+  --accent-subtle: rgba(88, 166, 216, 0.06);
   --bg: #FFFFFF;
   --bg-warm: #FAF8F5;
   --text-primary: #1a1a1a;
