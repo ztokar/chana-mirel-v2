@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/services/sports-action", "destination": "/services/sports-portraits", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

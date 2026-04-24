@@ -38,6 +38,17 @@
     });
   }
 
+  // ---- Dropdown toggle (Portraits menu) ----
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const isMobile = matchMedia('(max-width: 900px)').matches;
+      if (!isMobile) return; // desktop uses hover
+      e.preventDefault();
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  });
+
   // ---- Count-up stats ----
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fmt = new Intl.NumberFormat('en-US');
