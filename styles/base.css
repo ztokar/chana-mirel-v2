@@ -81,9 +81,10 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  font-weight: 400;
 }
 
 h2 {
@@ -894,28 +895,29 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 26px 18px 18px;
-  background: linear-gradient(transparent, rgba(19, 18, 20, 0.7));
+  padding: 32px 18px 20px;
+  background: linear-gradient(transparent, rgba(19, 18, 20, 0.55));
   text-align: center;
 }
 
 .service-card-label span {
   display: block;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #fff;
 }
 
 .service-card-label small {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
 }
 
 /* ---- Image Strip ---- */
@@ -1373,12 +1375,21 @@ p {
 .blog-card .label { font-size: 0.62rem; margin-bottom: 8px; }
 .blog-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  line-height: 1.35;
-  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  color: var(--text-primary);
 }
-.blog-card p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+.blog-card p {
+  color: var(--text-body);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
 
 /* ---- Intro paragraph block (Chana's explicit ask: before services) ---- */
 .intro-block {
