@@ -431,7 +431,7 @@ p {
   position: relative;
   z-index: 2;
   max-width: 980px;
-  margin: -72px auto 0;
+  margin: 32px auto 0;
   padding: 0 clamp(24px, 4vw, 60px);
   display: grid;
   grid-template-columns: 1fr;
