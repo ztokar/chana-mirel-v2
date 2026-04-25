@@ -240,67 +240,6 @@ p {
   width: 100%;
 }
 
-/* ---- Nav dropdown (Portraits -> Headshots + Sports) ---- */
-.nav-dropdown { position: relative; }
-.nav-dropdown-toggle {
-  background: none;
-  border: 0;
-  padding: 0 0 2px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #3a3a3a;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.nav-dropdown-toggle:hover,
-.nav-dropdown-toggle[aria-expanded="true"] { color: var(--accent); }
-.nav-caret { font-size: 0.6rem; transition: transform 0.25s ease; }
-.nav-dropdown-toggle[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
-
-.nav-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 14px);
-  left: -18px;
-  min-width: 240px;
-  background: #fff;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
-  padding: 14px 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-6px);
-  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0s linear 0.22s;
-  z-index: 120;
-}
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu,
-.nav-dropdown-toggle[aria-expanded="true"] + .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition-delay: 0s;
-}
-.nav-dropdown-menu li { width: 100%; }
-.nav-dropdown-menu a {
-  display: block;
-  padding: 10px 20px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #3a3a3a;
-  white-space: nowrap;
-}
-.nav-dropdown-menu a::after { display: none; }
-.nav-dropdown-menu a:hover { background: var(--accent-subtle); color: var(--accent); }
-
 .nav-toggle {
   display: none;
   background: none;
@@ -1408,27 +1347,6 @@ p {
   .nav-links a { display: block; padding: 8px 0; font-size: 0.95rem; }
   .nav-toggle { display: flex; }
 
-  /* Mobile: dropdown becomes inline expanding list */
-  .nav-dropdown-toggle {
-    padding: 8px 0;
-    font-size: 0.95rem;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .nav-dropdown-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: 0;
-    padding: 0 0 4px 14px;
-    min-width: 0;
-    background: transparent;
-    display: none;
-  }
-  .nav-dropdown-toggle[aria-expanded="true"] + .nav-dropdown-menu { display: block; }
-  .nav-dropdown-menu a { padding: 6px 0; font-size: 0.85rem; }
 }
 
 /* ---- Tighter services grid per Chana's feedback ("too much white space") ---- */
