@@ -176,8 +176,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
   height: 76px;
 }
+
+.nav-logo { flex: 0 0 auto; }
 
 .nav-logo {
   font-family: 'Playfair Display', Georgia, serif;
