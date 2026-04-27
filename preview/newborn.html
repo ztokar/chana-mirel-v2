@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>PREVIEW — Newborn (Kutner-style layout)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/base.css?v=8">
+  <style>
+    /* PREVIEW-ONLY: text-first hero, tight, Kutner-style */
+    .preview-banner { background: #fff8e1; border-bottom: 1px solid #f0e3b0; padding: 8px 20px; text-align: center; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6a5b1a; }
+    .kutner-hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(28px, 5vw, 80px); align-items: center; max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 60px); }
+    .kutner-hero-text .label { font-family: 'Outfit', sans-serif; font-size: 0.7rem; letter-spacing: 0.32em; text-transform: uppercase; color: #58A6D8; margin-bottom: 18px; }
+    .kutner-hero-text h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; margin-bottom: 22px; color: #1a2a3a; max-width: 11ch; }
+    .kutner-hero-text p { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.55; color: #4a5a6a; margin-bottom: 28px; max-width: 38ch; }
+    .kutner-hero-text .btn { display: inline-block; padding: 13px 32px; background: #58A6D8; color: #fff; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
+    .kutner-hero-image { aspect-ratio: 4/5; overflow: hidden; }
+    .kutner-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+    @media (max-width: 768px) {
+      .kutner-hero { grid-template-columns: 1fr; gap: 24px; padding: 40px 20px; }
+      .kutner-hero-image { aspect-ratio: 4/5; max-width: 360px; margin: 0 auto; }
+    }
+
+    /* Text-first body sections */
+    .kutner-body { max-width: 680px; margin: 0 auto; padding: clamp(40px, 5vw, 80px) clamp(20px, 4vw, 40px); }
+    .kutner-body h2 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 2rem); margin-bottom: 18px; color: #1a2a3a; }
+    .kutner-body .label { font-family: 'Outfit', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8a9aaa; margin-bottom: 12px; }
+    .kutner-body p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.7; color: #4a5a6a; margin-bottom: 18px; }
+
+    /* Single accent image between text sections */
+    .kutner-accent { max-width: 880px; margin: 20px auto 40px; padding: 0 clamp(20px, 4vw, 40px); }
+    .kutner-accent img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center 30%; display: block; }
+
+    /* Tighter FAQ */
+    .kutner-faq-section { background: #faf8f5; padding: clamp(40px, 5vw, 70px) clamp(20px, 4vw, 40px); }
+    .kutner-faq-section .inner { max-width: 720px; margin: 0 auto; }
+    .kutner-faq-section h2 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 1.6rem; text-align: center; margin-bottom: 30px; color: #1a2a3a; }
+    .kutner-faq-section details { border-bottom: 1px solid #e6e2dd; padding: 16px 0; }
+    .kutner-faq-section summary { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; color: #1a2a3a; }
+    .kutner-faq-section details p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1.6; color: #4a5a6a; margin-top: 12px; }
+
+    /* Closing CTA */
+    .kutner-cta { text-align: center; padding: clamp(50px, 6vw, 90px) clamp(20px, 4vw, 40px); background: #1a2a3a; color: #fff; }
+    .kutner-cta h2 { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 16px; }
+    .kutner-cta p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; margin-bottom: 28px; opacity: 0.9; }
+    .kutner-cta .btn { display: inline-block; padding: 14px 36px; background: #F4B6C0; color: #1a2a3a; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="preview-banner">PREVIEW — Kutner-style template (not live, for review only)</div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo" aria-label="Chana Mirel Photography home">
+        <img src="../images/logos/Signature_Logo_Black.png" alt="Chana Mirel Photography" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../">Home</a></li>
+        <li><a href="../services/newborn-photography.html">Newborn</a></li>
+        <li><a href="../services/maternity-photography.html">Maternity</a></li>
+        <li><a href="../services/cake-smash-milestone.html">Cake Smash</a></li>
+        <li><a href="../services/family-photography.html">Family</a></li>
+        <li><a href="../services/headshots-personal-branding.html">Headshots</a></li>
+        <li><a href="../services/sports-portraits.html">Sports</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../blog/">Blog</a></li>
+        <li><a href="../contact.html" class="btn btn-primary" style="padding:10px 24px;font-size:0.62rem;">Inquire</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO: text-first, single image. Total 1 image above the fold. -->
+  <section class="kutner-hero">
+    <div class="kutner-hero-text">
+      <div class="label">Newborn Sessions</div>
+      <h1>Sleepy, soft, and exactly how you remember them.</h1>
+      <p>The first two weeks pass in a blur. A studio newborn session with Chana captures the size of their hands, the curl of their feet, the way they fold into themselves before they uncurl into the world.</p>
+      <a href="../contact.html" class="btn">Book a session</a>
+    </div>
+    <div class="kutner-hero-image">
+      <img src="../images/real/hero-heart-newborn.jpg" alt="Newborn in blue heart wrap at Baltimore studio">
+    </div>
+  </section>
+
+  <!-- BODY 1: pure text -->
+  <section class="kutner-body">
+    <div class="label">When to come in</div>
+    <h2>Between five and fourteen days old.</h2>
+    <p>Sessions land best in the first two weeks. That is when babies are still sleepy enough for the curled-up poses, the wraps, and the props. After day fourteen they wake up to the world and the session shifts to alert portraits, which are also lovely but a different look.</p>
+    <p>If you are reading this still pregnant, get on the calendar now and we will pencil in a tentative window. We finalize the date once baby arrives.</p>
+  </section>
+
+  <!-- ACCENT: one image -->
+  <section class="kutner-accent">
+    <img src="../images/real/NB_Strauss-0637.jpg" alt="Sleeping newborn swaddled in cream">
+  </section>
+
+  <!-- BODY 2: pure text -->
+  <section class="kutner-body">
+    <div class="label">The session</div>
+    <h2>Three to four hours, on baby's clock.</h2>
+    <p>Newborns set the pace. We feed when they want to feed and we work between naps. Most sessions run three to four hours, sometimes longer if there is fussing or a diaper change to wait out. The studio is warm and quiet so they settle quickly.</p>
+    <p>You are welcome to bring a partner, snacks, and anything that helps you relax. Most parents are exhausted and that is fine. The studio is set up so you can rest while we work with baby.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="kutner-faq-section">
+    <div class="inner">
+      <h2>Common questions</h2>
+      <details><summary>How long does a newborn session take?</summary><p>Three to four hours, sometimes longer. We work around feeding and naps.</p></details>
+      <details><summary>Do you provide outfits and props?</summary><p>Yes. The studio has wraps, hats, headbands, and a full prop wardrobe. Nothing to buy in advance.</p></details>
+      <details><summary>What if my baby is fussy?</summary><p>Normal and expected. We pause, feed, soothe, and try again. The schedule is built for it.</p></details>
+      <details><summary>When will I get my photos?</summary><p>Galleries are delivered within three to four weeks of your session.</p></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="kutner-cta">
+    <h2>Reserve your newborn session.</h2>
+    <p>Book early. Newborn dates fill up months ahead.</p>
+    <a href="../contact.html" class="btn">Inquire about a session</a>
+  </section>
+
+  <script src="../scripts/main.js?v=8"></script>
+</body>
+</html>
