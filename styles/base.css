@@ -467,14 +467,7 @@ p {
   aspect-ratio: 4/5.2;
 }
 .hero-cell:hover img { transform: scale(1.03); }
-@media (max-width: 768px) {
-  .hero-grid-3up {
-    grid-template-columns: 1fr 1.15fr 1fr;
-    gap: 6px;
-    padding: 0 12px;
-  }
-  .hero-cell img, .hero-cell-center img { aspect-ratio: 3/4; }
-}
+/* placeholder - rule moved to end of file to win cascade */
 
 .hero-panel {
   position: relative;
@@ -1535,4 +1528,30 @@ p {
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---- Mobile hero overrides (keep side-by-side, declared last to win cascade) ---- */
+@media (max-width: 900px) {
+  .hero-grid.hero-grid-3up {
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 6px;
+    padding: 0 12px;
+    max-width: none;
+  }
+  .hero-grid.hero-grid-3up .hero-cell img,
+  .hero-grid.hero-grid-3up .hero-cell-center img { aspect-ratio: 3/4; }
+
+  /* Inner-page hero: large image on top, 2 small side-by-side below */
+  .hero-grid:not(.hero-grid-3up) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+    padding: 0 12px;
+  }
+  .hero-grid:not(.hero-grid-3up) .large {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .hero-grid:not(.hero-grid-3up) .large img { aspect-ratio: 4/5; }
+  .hero-grid:not(.hero-grid-3up) .small img { aspect-ratio: 1/1; }
 }
